@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    border: 0;
+    background-image: linear-gradient(rgb(134, 141, 240),rgb(52, 64, 236));
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#weather_section {
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding : 10px;
+    height: 20vh;
+}
+
+#temparature_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+}
+
+#search {
+    display: flex;
+}
+
+#city {
+    margin-bottom: 30px;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#city:hover {
+    box-shadow: 0 1px 10px 1px rgba(0,0,0,0.19);
+}
+
+#search_button {
+    padding: 5px;
+    margin-left: -35px;
+    outline: none;
+    cursor: pointer;
+    height: 15px;
+    color: gray;
+}
+
+#search_button::-moz-focus-inner {
+    border: 0;
+}
+
+#weather_icon {
+    font-size: 60px;
+}
+
+#degree {
+    font-size: 54px;
+}

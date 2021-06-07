@@ -1,4 +1,8 @@
 import getWeather from './getWeather';
 
-document.body.style.background="#C3C8DC"
-getWeather("Chennai");
+const city=document.querySelector("#city")
+const search_button=document.querySelector("#search_button")
+
+search_button.addEventListener("click",() => {
+    getWeather(city.value);
+})
