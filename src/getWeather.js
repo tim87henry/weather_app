@@ -4,9 +4,8 @@ import printValues from './printValues';
 function getWeather(locn) {
     let weather_promise = performAPICall(locn);
     weather_promise.then(function(response) {
-        let temp = response.main.temp;
+        let temp = Math.round(response.main.temp);
         let humidity = response.main.humidity;
-        //console.log(response.weather[0].main)
         let description = response.weather[0].main;
 
         let local_time = new Date();
@@ -16,10 +15,19 @@ function getWeather(locn) {
         const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         let day = days[city_time.getDay()];
         let date = months[city_time.getMonth()]+" "+city_time.getDate();;
-        let time = city_time.getHours()+":"+city_time.getMinutes();
+        let hour = city_time.getHours();
+        let min = city_time.getMinutes();
+        hour = (hour.toString().length === 1) ? "0"+hour : hour;
+        min = (min.toString().length === 1) ? "0"+min : min;
+        let time = hour+":"+min;
         printValues({temp, humidity, description, day, date, time, locn});
     }).catch(function(err) {
         console.log("Please enter a valid city "+err)
+        document.querySelector("#icon").textContent="Please enter a valid city";
+        document.querySelector("#degree").textContent="";
+        document.querySelector("#summary").textContent="";
+        document.querySelector("#humidity").textContent="";
+        document.querySelector("#place").textContent="";
     })
 }
 
