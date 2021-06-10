@@ -2,8 +2,8 @@ body {
     margin: 0;
     border: 0;
     background-image: linear-gradient(rgb(134, 141, 240),rgb(52, 64, 236));
-    color: whitesmoke;
-    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #weather_section {
