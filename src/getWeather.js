@@ -6,7 +6,7 @@ function getWeather(locn) {
     weather_promise.then(function(response) {
         let temp = Math.round(response.main.temp);
         let humidity = response.main.humidity;
-        let description = response.weather[0].main;
+        let summary = response.weather[0].main;
 
         let local_time = new Date();
         let utc_time = local_time.getTime() + (local_time.getTimezoneOffset()*60000);
@@ -20,7 +20,7 @@ function getWeather(locn) {
         hour = (hour.toString().length === 1) ? "0"+hour : hour;
         min = (min.toString().length === 1) ? "0"+min : min;
         let time = hour+":"+min;
-        printValues({temp, humidity, description, day, date, time, locn});
+        printValues({temp, humidity, summary, day, date, time, locn});
     }).catch(function(err) {
         console.log("Please enter a valid city "+err)
         document.querySelector("#icon").textContent="Please enter a valid city";
