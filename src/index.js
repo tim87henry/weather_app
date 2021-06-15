@@ -5,4 +5,10 @@ const search_button=document.querySelector("#search_button")
 
 search_button.addEventListener("click",() => {
     getWeather(city.value);
-})
+});
+
+city.addEventListener("keypress",(e) => {
+    if (e.code === "Enter") {
+        getWeather(city.value);
+    }
+});
