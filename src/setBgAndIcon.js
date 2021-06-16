@@ -3,8 +3,8 @@ function setBgAndIcon(time,summary) {
     const body = document.body;
     const hour = parseInt(time.split(":")[0]);
     const sun = "linear-gradient(rgb(204, 203, 146),rgb(206, 204, 121))";
-    const dark = "linear-gradient(rgb(138, 138, 128),rgb(114, 114, 106))";
-    const sky = "linear-gradient(rgb(162, 167, 238),rgb(87, 97, 233))";
+    const dark = "linear-gradient(rgb(173, 173, 162),rgb(151, 151, 142))";
+    const sky = "linear-gradient(rgb(190, 192, 235),rgb(127, 134, 233))";
     let bgColor = sky;
     let iconImage = "clear_day.svg";
     if (hour <= 5 || hour >= 19) {
