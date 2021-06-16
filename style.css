@@ -1,7 +1,7 @@
 body {
     margin: 0;
     border: 0;
-    background-image: linear-gradient(rgb(162, 167, 238),rgb(87, 97, 233));
+    background-image: linear-gradient(rgb(190, 192, 235),rgb(127, 134, 233));
     color: black;
     font-family: 'Montserrat', sans-serif;
 }
@@ -61,4 +61,14 @@ body {
 
 #degree {
     font-size: 54px;
+}
+
+#units {
+    display: flex;
+}
+
+.unit {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
 }
