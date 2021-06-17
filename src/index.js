@@ -25,3 +25,7 @@ for (let i=0;i<units.length;i++) {
         getWeather(city.value);
     })
 }
+
+window.addEventListener("load", function(){
+    getWeather("Rome")
+});
